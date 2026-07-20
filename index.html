@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Sweet Rolls</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigasi -->
+    <nav>
+        <div class="logo">
+            <h2>The Sweet Rolls</h2>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#product">Product</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="cart-icon">🛒</div>
+    </nav>
+
+    <!-- Hero Section (Home) -->
+    <section id="home" class="hero bg-banana">
+        <div class="hero-content">
+            <h1 id="hero-title">BANANA ROLLS</h1>
+            <p id="hero-desc">Crispy Outside, Sweet Inside<br>Perfect in Everybite</p>
+            <button class="btn-order">Order Now</button>
+            
+            <div class="flavor-selector">
+                <!-- Tambahkan gambar thumbnail kecil di dalam tag src nanti -->
+                <div class="flavor-btn active" onclick="changeFlavor('banana')">🍌</div>
+                <div class="flavor-btn" onclick="changeFlavor('choco')">🍫</div>
+                <div class="flavor-btn" onclick="changeFlavor('cheese')">🧀</div>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img id="main-image" src="link-gambar-banana.png" alt="Banana Rolls">
+        </div>
+    </section>
+
+    <!-- Halaman Checkout -->
+    <section id="checkout" class="checkout">
+        <div class="checkout-container">
+            <!-- Form Data Pembeli -->
+            <div class="checkout-form">
+                <h2>Detail Pengiriman</h2>
+                <form id="orderForm">
+                    <div class="input-group">
+                        <label for="name">Nama Lengkap</label>
+                        <input type="text" id="name" placeholder="Masukkan nama kamu" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="phone">Nomor WhatsApp</label>
+                        <input type="tel" id="phone" placeholder="08xxxxxxxxxx" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="address">Alamat Pengiriman</label>
+                        <textarea id="address" rows="3" placeholder="Alamat lengkap beserta patokan..." required></textarea>
+                    </div>
+                    <div class="input-group">
+                        <label>Metode Pembayaran</label>
+                        <select id="payment">
+                            <option value="transfer">Transfer Bank</option>
+                            <option value="ewallet">E-Wallet (GoPay/OVO/Dana)</option>
+                            <option value="cod">Cash on Delivery (COD)</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Ringkasan Pesanan -->
+            <div class="order-summary">
+                <h2>Ringkasan Pesanan</h2>
+                <div class="order-items">
+                    <div class="item">
+                        <span>Banana Rolls (x1)</span>
+                        <span>Rp 10.000</span>
+                    </div>
+                    <div class="item">
+                        <span>Choco Rolls (x2)</span>
+                        <span>Rp 20.000</span>
+                    </div>
+                </div>
+                <hr>
+                <div class="order-total">
+                    <strong>Total Pembayaran</strong>
+                    <strong>Rp 30.000</strong>
+                </div>
+                <button class="btn-checkout" onclick="processCheckout()">Selesaikan Pesanan</button>
+            </div>
+        </div>
+    </section>
+    
+    <script src="script.js"></script>
+</body>
+</html>

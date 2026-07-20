@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; /* Pastikan import font di HTML */
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: transparent;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    padding: 0 10%;
+    transition: background-color 0.5s ease; /* Animasi smooth ganti background */
+}
+
+/* Warna background tiap varian */
+.bg-banana { background-color: #FFF2A6; }
+.bg-choco { background-color: #FFE6CD; }
+.bg-cheese { background-color: #FFECA1; }
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    color: #000;
+    margin-bottom: 10px;
+    transition: opacity 0.3s ease;
+}
+
+.btn-order {
+    background-color: #F8B400;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.flavor-selector {
+    display: flex;
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.flavor-btn {
+    width: 50px;
+    height: 50px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.flavor-btn.active {
+    border: 2px solid #333;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image img {
+    width: 80%;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.fade-out {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* Checkout Section */
+.checkout {
+    padding: 80px 10%;
+    background-color: #FAFAFA;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkout-container {
+    display: flex;
+    gap: 40px;
+    width: 100%;
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.checkout-form, .order-summary {
+    flex: 1;
+}
+
+.checkout-form h2, .order-summary h2 {
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+}
+
+.input-group input, .input-group textarea, .input-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    outline: none;
+    font-family: inherit;
+    transition: border-color 0.3s ease;
+}
+
+.input-group input:focus, .input-group textarea:focus {
+    border-color: #F8B400; /* Warna kuning tema The Sweet Rolls */
+}
+
+.order-summary {
+    background-color: #FFF2A6; /* Warna kuning pastel pisang */
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.order-items .item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.order-summary hr {
+    border: none;
+    border-top: 1px dashed #333;
+    margin: 20px 0;
+}
+
+.order-total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.btn-checkout {
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-checkout:hover {
+    background-color: #F8B400;
+    color: #333;
+}
+
+/* Responsive agar rapi di layar HP */
+@media (max-width: 768px) {
+    .checkout-container {
+        flex-direction: column;
+    }
+}
