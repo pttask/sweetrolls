@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Sweet Rolls</title>
+    <!-- Framework Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Panggil CSS Custom Kita -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <!-- Navbar Bootstrap Transparan -->
+    <nav class="navbar navbar-expand-lg bg-transparent position-absolute w-100 z-3">
+        <div class="container mt-2">
+            <a class="navbar-brand fw-bold fs-4" href="{{ url_for('home') }}">The Sweet Rolls</a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto fw-semibold">
+                    <li class="nav-item"><a class="nav-link text-dark" href="{{ url_for('home') }}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="{{ url_for('products') }}">Products</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-dark text-white px-4 ms-lg-3 rounded-pill" href="{{ url_for('checkout') }}">Checkout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Konten Utama (Akan diisi oleh halaman lain) -->
+    {% block content %}
+    {% endblock %}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Panggil JS Custom Kita -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

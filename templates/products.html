@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2 class="text-center fw-bold mb-5 mt-4">Explore Delicious Taste</h2>
+<div class="row g-4 justify-content-center">
+    
+    <!-- Kartu Produk 1 -->
+    <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm rounded-4 text-center p-3">
+            <h1 class="mt-3"></h1>
+            <div class="card-body">
+                <h5 class="card-title fw-bold">Banana Rolls</h5>
+                <p class="card-text text-muted fw-semibold">Rp 10.000</p>
+                <a href="{{ url_for('checkout') }}" class="btn btn-outline-warning w-100 fw-bold text-dark">Buy Now</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Kartu Produk 2 -->
+    <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm rounded-4 text-center p-3">
+            <h1 class="mt-3"></h1>
+            <div class="card-body">
+                <h5 class="card-title fw-bold">Choco Rolls</h5>
+                <p class="card-text text-muted fw-semibold">Rp 12.000</p>
+                <a href="{{ url_for('checkout') }}" class="btn btn-outline-warning w-100 fw-bold text-dark">Buy Now</a>
+            </div>
+        </div>
+    </div>
+
+     <!-- Kartu Produk 3 -->
+    <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm rounded-4 text-center p-3">
+            <h1 class="mt-3"></h1>
+            <div class="card-body">
+                <h5 class="card-title fw-bold">Cheese Rolls</h5>
+                <p class="card-text text-muted fw-semibold">Rp 12.000</p>
+                <a href="{{ url_for('checkout') }}" class="btn btn-outline-warning w-100 fw-bold text-dark">Buy Now</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}
