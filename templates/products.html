@@ -1,44 +1,57 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h2 class="text-center fw-bold mb-5 mt-4">Explore Delicious Taste</h2>
-<div class="row g-4 justify-content-center">
+<!-- Beri padding atas agar tidak tertutup navbar -->
+<div class="container pt-5 mt-5">
+    <h2 class="text-center mb-5 mt-4 text-dark" style="font-size: 2.5rem;">Explore Delicious Taste</h2>
     
-    <!-- Kartu Produk 1 -->
-    <div class="col-md-4">
-        <div class="card h-100 border-0 shadow-sm rounded-4 text-center p-3">
-            <h1 class="mt-3"></h1>
-            <div class="card-body">
-                <h5 class="card-title fw-bold">Banana Rolls</h5>
-                <p class="card-text text-muted fw-semibold">Rp 10.000</p>
-                <a href="{{ url_for('checkout') }}" class="btn btn-outline-warning w-100 fw-bold text-dark">Buy Now</a>
+    <!-- Menggunakan col-md-8 offset-md-2 agar konten berada di tengah dan tidak terlalu lebar -->
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            
+            <!-- Produk 1 -->
+            <div class="product-card mb-4 d-flex align-items-center text-start">
+                <div class="product-img-container me-4 flex-shrink-0">
+                    <img src="{{ url_for('static', filename='img/banana.png') }}" alt="Banana Rolls">
+                </div>
+                <div class="flex-grow-1">
+                    <h3 class="mb-1">Banana Rolls</h3>
+                    <p class="text-muted fw-bold mb-3">Rp 10.000</p>
+                </div>
+                <div>
+                    <a href="{{ url_for('checkout') }}" class="btn btn-outline-warning text-dark fw-bold px-4 rounded-pill border-2" style="border-color: #f8b400;">Buy Now</a>
+                </div>
             </div>
+
+            <!-- Produk 2 -->
+            <div class="product-card mb-4 d-flex align-items-center text-start">
+                <div class="product-img-container me-4 flex-shrink-0">
+                    <img src="{{ url_for('static', filename='img/banana choco.png') }}" alt="Choco Rolls">
+                </div>
+                <div class="flex-grow-1">
+                    <h3 class="mb-1">Choco Rolls</h3>
+                    <p class="text-muted fw-bold mb-3">Rp 12.000</p>
+                </div>
+                <div>
+                    <a href="{{ url_for('checkout') }}" class="btn btn-outline-warning text-dark fw-bold px-4 rounded-pill border-2" style="border-color: #f8b400;">Buy Now</a>
+                </div>
+            </div>
+
+            <!-- Produk 3 -->
+            <div class="product-card mb-4 d-flex align-items-center text-start">
+                <div class="product-img-container me-4 flex-shrink-0">
+                    <img src="{{ url_for('static', filename='img/banana cheese.png') }}" alt="Cheese Rolls">
+                </div>
+                <div class="flex-grow-1">
+                    <h3 class="mb-1">Cheese Rolls</h3>
+                    <p class="text-muted fw-bold mb-3">Rp 12.000</p>
+                </div>
+                <div>
+                    <a href="{{ url_for('checkout') }}" class="btn btn-outline-warning text-dark fw-bold px-4 rounded-pill border-2" style="border-color: #f8b400;">Buy Now</a>
+                </div>
+            </div>
+
         </div>
     </div>
-
-    <!-- Kartu Produk 2 -->
-    <div class="col-md-4">
-        <div class="card h-100 border-0 shadow-sm rounded-4 text-center p-3">
-            <h1 class="mt-3"></h1>
-            <div class="card-body">
-                <h5 class="card-title fw-bold">Choco Rolls</h5>
-                <p class="card-text text-muted fw-semibold">Rp 12.000</p>
-                <a href="{{ url_for('checkout') }}" class="btn btn-outline-warning w-100 fw-bold text-dark">Buy Now</a>
-            </div>
-        </div>
-    </div>
-
-     <!-- Kartu Produk 3 -->
-    <div class="col-md-4">
-        <div class="card h-100 border-0 shadow-sm rounded-4 text-center p-3">
-            <h1 class="mt-3"></h1>
-            <div class="card-body">
-                <h5 class="card-title fw-bold">Cheese Rolls</h5>
-                <p class="card-text text-muted fw-semibold">Rp 12.000</p>
-                <a href="{{ url_for('checkout') }}" class="btn btn-outline-warning w-100 fw-bold text-dark">Buy Now</a>
-            </div>
-        </div>
-    </div>
-
 </div>
 {% endblock %}
